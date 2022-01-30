@@ -1,0 +1,30 @@
+var road;
+var runner;
+var trap;
+var treasure;
+var diamond;
+
+function preload(){
+roadImg = loadImage("download road.png");
+runnerImg = loadImage("download runner.png");
+}
+
+function setup(){
+    createCanvas(windowwidth, windowhieght);
+    road = createSprite(windowwidth, windowhieght);
+    road.addImage(roadImg);
+    road.velocityY = 4;
+    road.scale=1.2;
+    runner = createSprite(180,340,30,30);
+    runner.scale=0.08
+    runner.addAnimation("runnerrunning",runnerImg);
+
+}
+function draw(){
+    backgrond(0);
+    road.velocityY = 4;
+    runner.x = World.mouseX
+    drawSprites()
+
+}
+
